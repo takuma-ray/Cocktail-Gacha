@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', "Georgia", "Yu Mincho", "游明朝", serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0d0b09 0%, #17120e 100%); 
+    color: #f4f0ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    letter-spacing: 0.06em;
+}
+
+.container {
+    background: rgba(36, 30, 26, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 35px 30px; /* 少しタイトにして画面内に収める */
+    border-radius: 24px;
+    width: 100%;
+    max-width: 440px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(221, 169, 114, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #e5b37a;
+    text-shadow: 0 2px 10px rgba(229, 179, 122, 0.2);
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: #9c9289;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
+
+.image-zone {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.image-zone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.selection-zone {
+    background: rgba(18, 15, 13, 0.5);
+    padding: 15px 20px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(221, 169, 114, 0.05);
+}
+
+.form-group {
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.75rem;
+    color: #e5b37a;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    background: #1c1714;
+    border: 1px solid #2d241f;
+    color: #f4f0ec;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(180deg, #e5b37a 0%, #c6945b 100%);
+    border: none;
+    color: #120f0d;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: sans-serif;
+    letter-spacing: 0.15em;
+    box-shadow: 
+        0 10px 25px rgba(198, 148, 91, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    background: linear-gradient(180deg, #f0c594 0%, #d5a36a 100%);
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+.result-card {
+    background: linear-gradient(135deg, #221b17 0%, #17120f 100%);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(229, 179, 122, 0.1);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 2px 10px;
+    background: rgba(229, 179, 122, 0.1);
+    border: 1px solid rgba(229, 179, 122, 0.3);
+    color: #e5b37a;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    width: fit-content;
+}
+
+#cocktail-name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.taste-text {
+    font-size: 0.8rem;
+    color: #9c9289;
+    margin-bottom: 12px;
+    font-family: sans-serif;
+}
+
+.recipe-box, .comment-box {
+    margin-top: 10px;
+}
+
+.recipe-box h3, .comment-box h3 {
+    font-size: 0.75rem;
+    color: #e5b37a;
+    margin-bottom: 4px;
+    font-family: sans-serif;
+}
+
+.recipe-box p, .comment-box p {
+    font-size: 0.85rem;
+    color: #d1c9bf;
+    line-height: 1.5;
+}
+
+.comment-box p {
+    font-family: "Yu Mincho", "游明朝", serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.shaker-animation {
+    font-size: 0.9rem;
+    color: #e5b37a;
+    letter-spacing: 0.15em;
+    text-align: center;
+    padding: 40px 0;
+    font-family: sans-serif;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今夜の一杯 - カクテルガチャ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍸 今夜の一杯 🌟</h1>
+            <p class="subtitle">BAR "Gemini" へようこそ。今の気分は？</p>
+        </header>
+
+        <div class="image-zone">
+            <img id="cocktail-image" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=600" alt="Bar Counter">
+        </div>
+
+        <div class="selection-zone">
+            <div class="form-group">
+                <label for="situation">📍 シチュエーション</label>
+                <select id="situation">
+                    <option value="all">どこでも（おまかせ）</option>
+                    <option value="home">家でまったり（缶や身近な材料）</option>
+                    <option value="bar">お店で本格的（Barで頼みたい）</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="taste">👅 味の好み</label>
+                <select id="taste">
+                    <option value="all">なんでも来い！</option>
+                    <option value="sweet">甘め・フルーティー</option>
+                    <option value="refreshing">スッキリ・爽快</option>
+                    <option value="strong">ガツンと・強め</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="condition">💪 今の体調・状態</label>
+                <select id="condition">
+                    <option value="all">絶好調・普通</option>
+                    <option value="tired">ちょっと疲れ気味（癒やされたい）</option>
+                    <option value="happy">テンション高め（お祝い・楽しく）</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="gacha-btn" class="btn">シェイカーを振る！</button>
+
+        <div id="result-card" class="result-card hidden">
+            <div class="shaker-animation" id="shaker">⏳ バーテンダーが一杯を調合中...</div>
+            <div id="result-content" class="hidden">
+                <div class="badge" id="result-tag">家飲み</div>
+                <h2 id="cocktail-name">ジントニック</h2>
+                <p id="cocktail-taste" class="taste-text">スッキリ / 度数：普通</p>
+                
+                <div class="recipe-box">
+                    <h3>材料・レシピ</h3>
+                    <p id="cocktail-recipe"></p>
+                </div>
+                
+                <div class="comment-box">
+                    <h3>マスターからの一言</h3>
+                    <p id="cocktail-comment"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
